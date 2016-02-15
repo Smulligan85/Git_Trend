@@ -14,11 +14,5 @@ describe GitTrend do
         expect{cli.greet_user}.to output("Welcome, lets see what's trending in your language.\n").to_stdout
       end
     end
-
-    describe "#set_lang" do
-      it "asks user what language to find trending projects for" do
-        expect{cli.set_lang}.to output("What language would you like to search?\n").to_stdout
-      end
-    end
   end
 end

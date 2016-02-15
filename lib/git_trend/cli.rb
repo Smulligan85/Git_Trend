@@ -17,6 +17,7 @@ class GitTrend::CLI
       input = gets.strip.downcase
       display_projects(input)
     end
+    exit
   end
 
   def display_projects(lang)
