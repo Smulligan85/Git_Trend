@@ -3,6 +3,7 @@ class GitTrend::CLI
   def call
     greet_user
     set_lang
+    display_projects
   end
 
   def greet_user
@@ -14,7 +15,11 @@ class GitTrend::CLI
     while input != "exit"
       puts "What language would you like to search?"
       input = gets.strip.downcase
-      input
+      display_projects(input)
     end
+  end
+
+  def display_projects(lang)
+    GitTrend::Scraper.get_page(lang)
   end
 end
