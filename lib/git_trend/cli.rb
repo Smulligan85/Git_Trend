@@ -10,6 +10,10 @@ class GitTrend::CLI
     puts "Welcome, lets see what's trending in your language."
   end
 
+  def goodbye_user
+    puts "Stay Trendy!"
+  end
+
   def set_lang
     input = nil
     while input != "exit"
@@ -17,6 +21,7 @@ class GitTrend::CLI
       input = gets.strip.downcase
       display_projects(input)
     end
+    goodbye_user
     exit
   end
 
