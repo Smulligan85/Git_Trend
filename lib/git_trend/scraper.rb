@@ -10,10 +10,10 @@ class GitTrend::Scraper
     projects = []
     doc.css(".repo-list-item").each do |project|
       title = project.css(".repo-list-name a").attribute("href").value.split("/")[-1].capitalize.green
-      description = project.css(".repo-list-description").text
+      description = project.css(".repo-list-description").text.strip
       projects << {title: title, description: description}
     end
-    projects.each_with_index {|e, i| puts "#{i+1}. #{e[:title]} #{e[:description]}" }
+    projects.each_with_index {|e, i| puts "#{i+1}. #{e[:title]} -- #{e[:description]}" }
   end
 
   
