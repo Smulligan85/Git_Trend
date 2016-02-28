@@ -11,9 +11,16 @@ class GitTrend::Scraper
     doc.css(".repo-list-item").each do |project|
       title = project.css(".repo-list-name a").attribute("href").value.split("/")[-1].capitalize.green
       description = project.css(".repo-list-description").text.strip
-      projects << {title: title, description: description}
+      readme = "https://github.com" + project.css(".repo-list-name a").attribute("href").value
+      projects << {title: title, description: description, readme: readme}
     end
-    projects.each_with_index {|e, i| puts "#{i+1}. #{e[:title]} -- #{e[:description]}" }
+    projects
+  end
+
+  def self.get_readme(project)
+    doc = Nokogiri::HTML(open("#{project}"))
+    readme = doc.css("#readme").text
+    puts readme
   end
 
   
