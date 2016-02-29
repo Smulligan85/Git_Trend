@@ -19,7 +19,7 @@ class GitTrend::Scraper
 
   def self.get_readme(project)
     doc = Nokogiri::HTML(open("#{project}"))
-    readme = doc.css("#readme").text
+    readme = doc.css("#readme").text.strip.sub("README.md", "")
     puts readme
   end
 
