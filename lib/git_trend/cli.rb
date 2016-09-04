@@ -25,7 +25,7 @@ class GitTrend::CLI
   end
 
   def display_readme(lang)
-    puts "Choose number for project"
+    puts "Choose a number for the project"
     input = gets.strip.to_i - 1
     project = GitTrend::Scraper.get_page(lang)
     readme = project[input][:readme]
