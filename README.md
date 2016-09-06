@@ -22,7 +22,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Once you have Git Trend install you can run the program by typing `gittrend` in
+your terminal.  You will then see a welcome prompt and be able to select a
+language to search.
+
+![Git Trend Welcome](assets/gittrend-welcome.png)
+
+Next you can select a README to view by entering the corresponding number.
+
+![Git Trend Select](assets/gittrend-select.png)
+
 
 ## Development
 
