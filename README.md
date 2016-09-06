@@ -1,6 +1,6 @@
 # GitTrend
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/git_trend`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to Git Trend! The best way to stay up to date on trending GitHub projects from the comfort of your terminal.
 
 ## Installation
 
